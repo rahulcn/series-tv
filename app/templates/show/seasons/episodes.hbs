@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-5">
+        <h4>Episodes</h4>
+        {{#each model as |episode|}}
+          <li>{{#link-to 'show.seasons.episodes.episode' episode}}{{episode.title}}{{/link-to}}</li>
+        {{/each}}
+    </div>
+    <div class="col-md-4">
+        {{outlet}}
+    </div>
+</div>

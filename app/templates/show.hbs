@@ -1,3 +1,10 @@
 <div class="row" style="padding: 0px;">
-    <img src="{{model.external.images.banner.full}}" alt="{{model.title}}" class="img-responsive" style="width: 100%;"/>
+  <img src="{{model.external.images.banner.full}}" alt="{{model.title}}" class="img-responsive" style="width: 100%;" />
+  <div class="overview">{{model.overview}}</div>
+
+</div>
+<li>{{#link-to 'show.seasons' model}}Seasons{{/link-to}}</li>
+
+<div class="row">
+    {{outlet}}
 </div>

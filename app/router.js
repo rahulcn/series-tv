@@ -6,9 +6,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('about');
-  this.route('shows');
-  this.route('show', { path: '/shows/:show_id' });
+    this.route('about');
+    this.route('shows');
+    this.route('show', { path: '/shows/:show_id' }, function() {
+        this.route('seasons', { path: '/seasons' }, function() {
+            this.route('episodes', { path: '/:season_id/episodes' }, function() {
+                this.route('episode', { path: '/:episode_id' })
+            });
+        });
+    });
 });
 
 export default Router;

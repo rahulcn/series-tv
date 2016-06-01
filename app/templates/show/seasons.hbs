@@ -1,0 +1,11 @@
+<div class="col-md-3">
+    <h4>Seasons</h4>
+    <ul class="list-group">
+        {{#each model as |season|}}
+            <li class="list-group-item">{{#link-to 'show.seasons.episodes' season}}Season {{season.number}}{{/link-to}}</li>
+        {{/each}}
+    </ul>
+</div>
+<div class="col-md-9">
+    {{outlet}}
+</div>
