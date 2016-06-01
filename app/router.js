@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('shows');
     this.route('show', { path: '/shows/:show_id' }, function() {
         this.route('seasons', { path: '/seasons' }, function() {
+            // this.route('season', { path: '/:season_id' })
             this.route('episodes', { path: '/:season_id/episodes' }, function() {
                 this.route('episode', { path: '/:episode_id' })
             });
@@ -18,3 +19,6 @@ Router.map(function() {
 });
 
 export default Router;
+// this.route('episodes', { path: '/:season_id/episodes' }, function() {
+//     this.route('episode', { path: '/:episode_id' })
+// });
